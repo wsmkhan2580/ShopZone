@@ -1,74 +1,130 @@
-# ShopZone ⚡
+# 🛒 ShopZone
 
-A recruiter-friendly E-Commerce SPA built with **React 18**, **React Router v6**, and **Context API**.
+A modern and responsive E-Commerce Web Application built with React.js, React Router, Context API, and LocalStorage.
 
-## Tech Stack
-| Layer | Tool |
-|---|---|
-| UI | React 18 |
-| Routing | React Router DOM v6 |
-| State | Context API + useReducer |
-| Persistence | localStorage |
-| Data | dummyjson.com REST API |
-| Styling | Inline CSS + CSS Variables |
+## 🚀 Live Demo
 
-## Features
-- 🛍 **Shop page** — 100 products with search & category filter
-- 🔍 **Product detail** — image gallery, add-to-cart, stock info
-- 🛒 **Cart** — qty controls, remove items, live total
-- 🔐 **Auth** — mock "Login as Guest", protected Checkout route
-- 💾 **Persistence** — cart & auth survive page refresh via localStorage
-- 📱 **Responsive** — fluid grid layouts
+🔗 https://shop-zone-lake.vercel.app/
 
-## Getting Started
+## 📂 GitHub Repository
 
-```bash
-# 1. Clone or unzip
-cd shopzone
+🔗 https://github.com/wsmkhan2580/ShopZone.git
 
-# 2. Install dependencies
-npm install
-
-# 3. Run locally
-npm start
-# → http://localhost:3000
-Deploy to Vercel
-Option A — Vercel CLI (fastest):
-npm install -g vercel
-vercel        # follow the prompts; framework = Create React App
-Option B — Vercel Dashboard:
-Push the project to a GitHub repo.
-Go to vercel.com → Add New Project → import repo.
-Framework preset: Create React App (auto-detected).
-Click Deploy — done in ~60 seconds.
-SPA routing note: Vercel handles CRA routing automatically.
-If you ever eject or move to Vite, add a vercel.json:
-{ "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }
-Project Structure
-src/
-├── components/   Navbar, ProductCard, ProtectedRoute, Footer
-├── contexts/     CartContext (useReducer), AuthContext
-├── pages/        Home, Shop, ProductDetail, Cart, Checkout, Login, Contact
-├── utils/        formatCurrency.js
-├── App.jsx       Router + Provider tree
-└── index.js      ReactDOM.createRoot entry
 ---
 
-## ✅ Quick-start checklist
+## ✨ Features
 
-```bash
-mkdir shopzone && cd shopzone
-# paste package.json, then:
-npx create-react-app . --template cra-template   # scaffolds public/ and src/
-# replace src/ and public/index.html with the files above
-npm install react-router-dom
-npm start
+- Responsive Modern UI
+- Product Listing Page
+- Product Detail Page
+- Product Search Functionality
+- Shopping Cart System
+- Cart Quantity Management
+- Checkout Page
+- Guest Login System
+- Context API State Management
+- Local Storage Persistence
+- Dynamic Cart Count
+- Protected Routes
+- React Router Navigation
+- Mobile Friendly Design
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React.js
+- React Router DOM
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+
+### State Management
+
+- Context API
+- useReducer
+- useState
+- useEffect
+
+### Storage
+
+- LocalStorage
+
+### Deployment
+
+- Vercel
+
+---
+
+## 📁 Project Structure
+
+```text
+src
+│
+├── components
+│   ├── Navbar.jsx
+│   ├── ProductCard.jsx
+│   ├── Footer.jsx
+│   └── ProtectedRoute.jsx
+│
+├── contexts
+│   ├── CartContext.jsx
+│   └── AuthContext.jsx
+│
+├── pages
+│   ├── Home.jsx
+│   ├── Shop.jsx
+│   ├── ProductDetail.jsx
+│   ├── Cart.jsx
+│   ├── Checkout.jsx
+│   ├── Login.jsx
+│   ├── Signup.jsx
+│   └── Contact.jsx
+│
+├── utils
+│   └── formatCurrency.js
+│
+├── App.jsx
+└── main.jsx
 ```
 
-That's every file you need. Here's a summary of what each phase delivers:
+---
 
-**Phase 1 (Routing)** — `App.jsx` sets up all 6 routes including the dynamic `/product/:id`. `Shop.jsx` fetches 100 products from dummyjson and filters them client-side.
+## 🛒 Cart Features
 
-**Phase 2 (Cart State)** — `CartContext.jsx` uses `useReducer` for clean, predictable mutations. `Navbar.jsx` shows a live badge. `/cart` shows the full order with qty controls.
+- Add Products to Cart
+- Remove Products from Cart
+- Increase Quantity
+- Decrease Quantity
+- Automatic Item Removal When Quantity Reaches Zero
+- Cart Total Calculation
+- Dynamic Cart Count
+- Persistent Cart Using LocalStorage
 
-**Phase 3 (Advanced)** — `localStorage` hydration in both contexts survives page refresh. `AuthContext` provides mock guest login. `ProtectedRoute` redirects unauthenticated users to `/login` and bounces them back after auth using React Router's `location.state`.
+---
+
+## 🔐 Authentication Features
+
+- Guest Login
+- Persistent Login State
+- Logout Functionality
+- Protected Routes
+- User Session Persistence Using LocalStorage
+
+---
+
+## 📊 Key Functionalities
+
+- Browse Products
+- Search Products
+- View Product Details
+- Add Products to Cart
+- Update Cart Quantity
+- Checkout Workflow
+- Guest Authentication
+- Persistent User Sessions
+- Responsive Design
+
+---
